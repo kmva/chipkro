@@ -1,0 +1,100 @@
+/* font-family: 'Alegreya', serif;
+font-family: 'Istok Web', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+
+/*** colors ***/
+
+/* $blue-m: #4D59A0; */
+$blue-m:#285299;
+$blue-d: #1F2964;
+$gold: #D38907;
+$grey: #2C2B2B;
+$lightgrey: #717171;
+
+
+/** fonts **/
+
+$main-sans: 'Istok Web', sans-serif;
+$second-sans: 'Alegreya', serif;
+
+$mobile: 675px;
+$s-mobile: 414px;
+$md: 933px;
+$large: 1270px;
+
+
+/*** mixins ***/
+
+@mixin bodyFont{
+    font-family: $main-sans;
+    font-weight: normal;
+}
+
+@mixin flex($justify-content, $align-items){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin button($padding-top, $padding-right, $margin-top){
+    display: block;
+    margin: $margin-top auto;
+    padding: $padding-top $padding-right;
+    background: $darkblue;
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+    transition: .3s;
+    border: none;
+
+    &:hover, &:active{
+        background: #FFF;
+        outline: 1px solid $darkblue;
+        color: $darkblue;
+        cursor: pointer;
+    }
+}
+
+@mixin link_style{
+    display: block;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+/** media queries **/ 
+
+@mixin mobile{
+    @media(max-width: $mobile){
+        @content;
+    }
+}
+
+@mixin mobile-landscape{
+    @media(max-width: $mobile) and (orientation: landscape){
+        @content;
+    }
+}
+
+@mixin s-mobile{
+    @media(max-width: $s-mobile){
+        @content;
+    }
+}
+
+@mixin md{
+    @media(max-width: $md){
+        @content;
+    }
+}
+
+@mixin md-landscape{
+    @media(max-width: $md) and (orientation: landscape){
+        @content;
+    }
+}
+
+@mixin large{
+    @media(max-width: $large){
+        @content;
+    }
+}
