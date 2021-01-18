@@ -158,7 +158,8 @@ main{
     }
 
     .container{
-        padding: 3em 6em;
+        padding: 0em 6em;
+        margin-bottom: 6em;
 
         &:first-of-type{
             padding-top: 5em;
@@ -190,42 +191,15 @@ main{
     }
 
     h2{
-        margin-bottom: 1.8em;
-        font-size: 1.9rem;
-
-        @include md{
-            display: none;
-        }
+        margin-bottom: 1.6em;
+        font-size: 2rem;
+        text-align: center;
+        color: $blue-m;
     }
 
-    .mobile_nav{
-        display: none;
-        width: 100%;
-        margin: 3em auto;
-        font-size: 1.2rem;
-        padding-bottom: .7em;
-        border-bottom: 3px solid $blue-m;
-
-        @include md{
-            display: block;
-            position: relative;
-            margin: 2em auto;
-        }
-
-        &__item{
-            display: inline-block;
-
-            &:first-child{
-                margin-right: 1em;
-            }
-
-            &--active{
-                
-                a{
-                    color: $gold;
-                }
-            }
-        }
+    h3.bigger{
+        margin-bottom: 1.8em;
+        font-size: 1.6rem;
     }
 
     .news{
@@ -240,8 +214,9 @@ main{
         }
 
         @include md{
-            width: 100%;
+            width: 80%;
             /* margin-top: 2em; */
+            margin: 0;
             margin-bottom: 3em;
         }
 
@@ -303,11 +278,6 @@ main{
 
         &__text{
             font-family: 'Alegreya', serif;
-
-           /*  @media (max-width: 1151px){
-                display: none;
-            } */
-
         }
 
         &__details{
@@ -335,7 +305,7 @@ main{
         }
 
         @include md{
-           width: 100%;
+           width: 80%;
         }
 
         &__block{
@@ -344,7 +314,7 @@ main{
             position: relative;
 
             @include md{
-                width: 70%;
+                width: 100%;
                 margin: auto;
                 margin-bottom:4em;
             }
@@ -417,6 +387,10 @@ main{
                 bottom: -35px;
             }
         }
+    }
+
+    .cards_section{
+        margin-bottom: 6em;
     }
 
     .cards{
@@ -527,12 +501,117 @@ main{
             }
         }
     }
+
+    .documents_section .row{
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .documents{
+        width: 100%;
+        background: $lightgrey;
+    }
+
+    .document{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 1.8em;
+        background: #FFF;
+        color: $blue-m;
+        width: calc(100%/3);
+        /* gap: 12px; */
+        height: 120px;
+        border: .5px solid #FFF;
+        transition: .3s;
+
+        &:hover{
+            border: .5px solid $lightgrey;
+            transform: translateY(-.4em);
+
+            i{
+                color: $gold;
+            }
+        }
+
+        i{
+            display: block;
+            font-size: 4rem;
+            margin-right: .7em;
+            transition: .3s;
+        }
+
+        &_title{
+            color: $grey;
+        }
+    }
+
+    .videos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2em;
+    }
+
+    .video{
+        width: 30%;
+    }
+
+    .links{
+        display: flex;
+        gap: 1em;
+        align-items: center;
+
+        &__link{
+            width: 25%;
+            /* max-height: 100px; */
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            /* background: url("../../img/links/mmc2.jpg") no-repeat center/cover;
+
+            &:nth-child(2){
+                background-image: url("../../img/links/МР2020_21.jpg");
+            }
+
+            &:nth-child(3){
+                background-image: url("../../img/links/soch.png");
+            }
+
+            &:nth-child(4){
+                background-image: url("../../img/links/resh.png");
+            } */
+        }
+    }
+
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .product{
+        width: 20%;
+        text-align: center;
+
+        img{
+            width: 100%;
+            margin-bottom: 2em;
+        }
+
+        p{
+            font-size: 1.3rem;
+        }
+    }
 }
 
-.all_news_link{
+.to_all_link{
     display: block;
     margin: auto;
-    width: 115px;
+    margin-top: 2em;
+    width: 160px;
     color: $blue-m;
     font-weight: bold;
     font-size: 1.1rem;
@@ -545,7 +624,7 @@ main{
         width: 70px;
         height: 2px;
         background: $blue-m;
-        margin: .4em auto 3em;
+        margin: .5em auto 3em;
         transition: .3s;
     }
 
