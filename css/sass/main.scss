@@ -38,7 +38,7 @@ main{
         position: relative;
         max-height: 850px;
         overflow: hidden;
-        margin-bottom: 1.5em;
+       /*  margin-bottom: 1.5em; */
 
         &__items{
             width: 100%;
@@ -157,26 +157,29 @@ main{
         }
     }
 
+    .container--colored{
+        /* background: rgba($color: $gold, $alpha: .1); */
+        background: rgba(236, 236, 236, 0.746);
+        max-width: 100%;
+    }
+
     .container{
-        padding: 0em 6em;
-        margin-bottom: 6em;
+        padding: 4em 5em;
 
-        &:first-of-type{
-            padding-top: 5em;
-        }
+        /* &:first-of-type{
+            padding-top: 4em;
+        } */
 
-        @include large{
-            padding: 0 3em;
-        }
+        /* @include large{
+            padding: 2em;
+        } */
 
         @include md{
-            &:first-of-type{
-                padding-top: 0;
-            }
+            padding: 3em 3.5em;
         }
     
         @include mobile{
-            padding: 0 1.5em;
+            padding: 1.5em 2em;
         }
     
         &--header{
@@ -198,7 +201,7 @@ main{
     }
 
     h3.bigger{
-        margin-bottom: 1.8em;
+        margin-bottom: 1.3em;
         font-size: 1.6rem;
     }
 
@@ -390,13 +393,13 @@ main{
     }
 
     .cards_section{
-        margin-bottom: 6em;
+        margin-bottom: 2em;
     }
 
     .cards{
         @include flex(space-between, flex-start);
         max-width: 1640px;
-        margin: 5em auto 4em;
+        margin: auto;
 
         @include md{
             margin: 1em auto 2em;
@@ -503,13 +506,14 @@ main{
     }
 
     .documents_section .row{
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
+        align-content: center;
     }
 
     .documents{
         width: 100%;
-        background: $lightgrey;
+        /* background: $lightgrey; */
     }
 
     .document{
@@ -522,16 +526,31 @@ main{
         width: calc(100%/3);
         /* gap: 12px; */
         height: 120px;
-        border: .5px solid #FFF;
+        border: .2px solid #FFF;
         transition: .3s;
 
         &:hover{
-            border: .5px solid $lightgrey;
+            border: .2px solid $lightgrey;
+            border-bottom-width: 7px;
             transform: translateY(-.4em);
 
             i{
                 color: $gold;
             }
+        }
+
+        @media screen and (max-width: 1115px){
+            width: calc(100%/2);
+        }
+
+        @include md{
+            font-size: .9rem;
+            padding: 1em;
+        }
+
+        @include mobile{
+            width: 100%;
+            padding: .7em .3em;
         }
 
         i{
@@ -550,61 +569,191 @@ main{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 2em;
+        gap: 1em;
+
+        @include mobile{
+            flex-direction: column;
+        }
     }
 
     .video{
-        width: 30%;
+        width: 32%;
+       /*  min-width: 27%; */
+
+        @include md{
+            width: 45%;
+            /* min-width: 45%; */
+        }
+
+        @include mobile{
+            width: 100%;
+        }
     }
 
     .links{
         display: flex;
+        flex-wrap: wrap;
         gap: 1em;
         align-items: center;
+        justify-content: space-around;
+
+        @include mobile{
+            flex-direction: column;
+        }
 
         &__link{
-            width: 25%;
-            /* max-height: 100px; */
+            width: 19%;
+            
+            @include md{
+                width: 40%;
+            }
+
+            @include mobile{
+                width: 60%;
+            }
 
             img{
                 width: 100%;
                 height: 100%;
-            }
-            /* background: url("../../img/links/mmc2.jpg") no-repeat center/cover;
+                transition: .3s;
+                opacity: .3;
 
-            &:nth-child(2){
-                background-image: url("../../img/links/МР2020_21.jpg");
+                &:hover{
+                    opacity: 1;
+                }
             }
-
-            &:nth-child(3){
-                background-image: url("../../img/links/soch.png");
-            }
-
-            &:nth-child(4){
-                background-image: url("../../img/links/resh.png");
-            } */
+            
         }
     }
 
     .products{
         display: flex;
         flex-wrap: wrap;
-        
+        justify-content: space-around;
+        gap: 1.5em;
+
+        /* @include mobile{
+            flex-direction: column;
+        } */
     }
 
     .product{
-        width: 20%;
+        width: 18%;
         text-align: center;
+        margin-bottom: 1.5em;
+
+        @include md{
+            width: 23%;
+        }
+
+        @include mobile{
+            width: 40%;
+        }
 
         img{
-            width: 100%;
-            margin-bottom: 2em;
+            width: 80%;
+            margin-bottom: 1.5em;
+
+            @include md{
+                width: 100%;
+                margin-bottom: .5em;
+            }
         }
 
         p{
             font-size: 1.3rem;
         }
     }
+
+    .testimonials_section{
+        border: 5px solid rgba($color: $gold, $alpha: .5);
+        border-right: none;
+        border-left: none;
+    }
+
+    .testimonials{
+        gap: 3em;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .testimonial{
+
+        width: 20%;/* 
+        background: #FFF;
+        padding: 2em; */
+
+        @include large{
+            width: 28%;
+        }
+
+        @include md{
+            width: 40%;
+        }
+
+        @include mobile{
+            width: 90%;
+        }
+
+        &__name{
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: $blue-d;
+            margin-bottom: .5em;
+        }
+
+        &__org{
+            margin-bottom: 1.1em;
+            color: $gold;
+        }
+
+        &__text{
+            color: $grey;
+            line-height: 130%;
+            text-align: justify;
+        }
+    }
+
+    .partners{
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .partner {
+
+        display: block;
+        width: 20%;
+        height: auto;
+        /* padding: 0 2em; */
+        text-align: center;
+        margin-bottom: 1em;
+
+        @include md{
+            width: 30%;
+        }
+
+        @include mobile{
+            width: 40%;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        img{
+            width: 80%;
+            max-width: 150px;
+            opacity: .3;
+            transition: .3s;
+
+            &:hover{
+                opacity: 1;
+            }
+
+        }
+    }
+
 }
 
 .to_all_link{
@@ -624,7 +773,7 @@ main{
         width: 70px;
         height: 2px;
         background: $blue-m;
-        margin: .5em auto 3em;
+        margin: .5em auto;
         transition: .3s;
     }
 
@@ -634,7 +783,7 @@ main{
         }
     }
 
-    @include md{
+    /* @include md{
         margin-bottom: 4em;
-    }
+    } */
 }
