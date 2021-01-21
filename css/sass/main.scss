@@ -17,6 +17,12 @@ body{
     display: none;
 }
 
+@include mobile{
+    .hide-m{
+        display: none !important;
+    }
+}
+
 main{
     color: $grey;
     padding-bottom: 4em;
@@ -38,14 +44,12 @@ main{
         position: relative;
         max-height: 850px;
         overflow: hidden;
-       /*  margin-bottom: 1.5em; */
 
         &__items{
             width: 100%;
             overflow: hidden;
             position: relative;
             @include flex(space-around, center);
-            /* flex: 1 0 100%; */
             transition: 1s;
         }
 
@@ -54,13 +58,7 @@ main{
             top: 0;
             right: 0;
             width: 100%;
-            /* transform: translateX(-100%); */
-            transition: 3s ;
             float: left;
-
-            /* &--active{
-                flex: 1 0 100%;
-            } */
         }
 
         &__image{
@@ -158,21 +156,12 @@ main{
     }
 
     .container--colored{
-        /* background: rgba($color: $gold, $alpha: .1); */
         background: rgba(236, 236, 236, 0.746);
         max-width: 100%;
     }
 
     .container{
         padding: 4em 5em;
-
-        /* &:first-of-type{
-            padding-top: 4em;
-        } */
-
-        /* @include large{
-            padding: 2em;
-        } */
 
         @include md{
             padding: 3em 3.5em;
@@ -198,6 +187,10 @@ main{
         font-size: 2rem;
         text-align: center;
         color: $blue-m;
+
+        @include mobile{
+            margin-bottom: .7em;
+        }
     }
 
     h3.bigger{
@@ -217,7 +210,7 @@ main{
         }
 
         @include md{
-            width: 80%;
+            width: 100%;
             /* margin-top: 2em; */
             margin: 0;
             margin-bottom: 3em;
@@ -293,6 +286,10 @@ main{
             &:hover, &:active{
                 color: $gold
             }
+
+            @include mobile{
+                margin: .6em 0;
+            }
         }
 
         &__date{
@@ -308,7 +305,7 @@ main{
         }
 
         @include md{
-           width: 80%;
+           width: 100%;
         }
 
         &__block{
@@ -427,7 +424,7 @@ main{
             @include mobile{
                 width: 100%;
                 margin: 0 auto 2em;
-                min-height: 526px;
+               /*  min-height: 526px; */
 
                 &:last-child{
                     margin-bottom: .5em;
@@ -494,6 +491,10 @@ main{
                     padding: .6em;
                 }
 
+                @include mobile{
+                    position: static;
+                }
+
                 &:hover, &:active{
                     /* background: #FFF;
                     border: 1px solid $blue-m;
@@ -513,7 +514,6 @@ main{
 
     .documents{
         width: 100%;
-        /* background: $lightgrey; */
     }
 
     .document{
@@ -524,7 +524,6 @@ main{
         background: #FFF;
         color: $blue-m;
         width: calc(100%/3);
-        /* gap: 12px; */
         height: 120px;
         border: .2px solid #FFF;
         transition: .3s;
@@ -549,6 +548,7 @@ main{
         }
 
         @include mobile{
+            justify-content: start;
             width: 100%;
             padding: .7em .3em;
         }
@@ -578,11 +578,9 @@ main{
 
     .video{
         width: 32%;
-       /*  min-width: 27%; */
 
         @include md{
             width: 45%;
-            /* min-width: 45%; */
         }
 
         @include mobile{
@@ -669,36 +667,79 @@ main{
         border: 5px solid rgba($color: $gold, $alpha: .5);
         border-right: none;
         border-left: none;
+        overflow: hidden;
+    }
+
+    .testimonials_wrapper{
+        overflow: hidden;
     }
 
     .testimonials{
-        gap: 3em;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        overflow: hidden;
+        position: relative;
+        transition: 1s;
+        display: flex;
+
+        &_controllers{
+            position: relative;
+            right: -80%;
+            top: -5.7em;
+            width: 100px;
+
+            @include mobile{
+                top: -3.8em
+            }
+        }
+
+        &_controller{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            padding: .45em;
+            border: 2px solid $blue-m;
+            color: $blue-m;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1.2rem;
+            transition: .3s;
+            background: transparent;
+
+            &:hover, &:active{
+                background: $blue-m;
+                opacity: 1;
+
+                i{
+                    color: #FFF;
+                }
+            }
+
+            i{
+                transition: .3s;
+            }
+        }
     }
 
     .testimonial{
+        position: relative;
+        top: 0;
+        right: 0;
+        width: calc(11% - 4em);
+        margin: 0 2em;
+        transition: .4s;
 
-        width: 20%;/* 
-        background: #FFF;
-        padding: 2em; */
-
-        @include large{
-            width: 28%;
+       /*  @include md{
+            width: calc(300%/2 - 4em);
         }
 
-        @include md{
-            width: 40%;
-        }
-
-        @include mobile{
-            width: 90%;
-        }
+        @include mobile{ 
+            width: calc(100%/3 - 4em) !important;
+        } */
 
         &__name{
             font-weight: bold;
             font-size: 1.4rem;
-            color: $blue-d;
+            color: $grey;
             margin-bottom: .5em;
         }
 
