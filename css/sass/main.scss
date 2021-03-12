@@ -49,7 +49,8 @@ main{
             width: 100%;
             overflow: hidden;
             position: relative;
-            @include flex(space-around, center);
+            /* @include flex(space-around, center); */
+            display: flex;
             transition: 1s;
         }
 
@@ -518,13 +519,13 @@ main{
 
     .document{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         padding: 1em 1.8em;
         background: #FFF;
         color: $blue-m;
         width: calc(100%/3);
-        height: 120px;
+        height: 125px;
         border: .2px solid #FFF;
         transition: .3s;
 
@@ -537,6 +538,10 @@ main{
                 color: $gold;
             }
         }
+
+        /* @media screen and (max-width: 1377px){
+            font-size: .9rem;
+        } */
 
         @media screen and (max-width: 1115px){
             width: calc(100%/2);
@@ -556,7 +561,7 @@ main{
         i{
             display: block;
             font-size: 4rem;
-            margin-right: .7em;
+            margin-right: .5em;
             transition: .3s;
         }
 
@@ -600,7 +605,7 @@ main{
         }
 
         &__link{
-            width: 19%;
+            width: 15%;
             
             @include md{
                 width: 40%;
@@ -629,10 +634,6 @@ main{
         flex-wrap: wrap;
         justify-content: space-around;
         gap: 1.5em;
-
-        /* @include mobile{
-            flex-direction: column;
-        } */
     }
 
     .product{
@@ -668,6 +669,13 @@ main{
         border-right: none;
         border-left: none;
         overflow: hidden;
+        position: relative;
+
+        h2 {
+            @include mobile{
+                text-align: left;
+            }
+        }
     }
 
     .testimonials_wrapper{
@@ -676,18 +684,22 @@ main{
 
     .testimonials{
         overflow: hidden;
-        position: relative;
         transition: 1s;
         display: flex;
 
         &_controllers{
-            position: relative;
-            right: -80%;
-            top: -5.7em;
+            position: absolute;
+            right: 10%;
+            top: 3.5em;
             width: 100px;
 
+            @include md{
+                top: 2.75em
+            }
+
             @include mobile{
-                top: -3.8em
+                top: 1.25em;
+                right: .9em;
             }
         }
 
@@ -707,7 +719,6 @@ main{
 
             &:hover, &:active{
                 background: $blue-m;
-                opacity: 1;
 
                 i{
                     color: #FFF;
@@ -717,6 +728,12 @@ main{
             i{
                 transition: .3s;
             }
+
+            @include mobile{
+                width: 35px;
+                height: 35px;
+                padding: 0.33em;
+            }
         }
     }
 
@@ -724,17 +741,12 @@ main{
         position: relative;
         top: 0;
         right: 0;
-        width: calc(11% - 4em);
         margin: 0 2em;
         transition: .4s;
 
-       /*  @include md{
-            width: calc(300%/2 - 4em);
+        @include md{
+            margin: 0 1em;
         }
-
-        @include mobile{ 
-            width: calc(100%/3 - 4em) !important;
-        } */
 
         &__name{
             font-weight: bold;
@@ -766,7 +778,6 @@ main{
         display: block;
         width: 20%;
         height: auto;
-        /* padding: 0 2em; */
         text-align: center;
         margin-bottom: 1em;
 

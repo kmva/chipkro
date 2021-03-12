@@ -58,14 +58,10 @@ main .slider_section__items {
   width: 100%;
   overflow: hidden;
   position: relative;
+  /* @include flex(space-around, center); */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -636,9 +632,9 @@ main .document {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -646,10 +642,13 @@ main .document {
   background: #FFF;
   color: #285299;
   width: calc(100%/3);
-  height: 120px;
+  height: 125px;
   border: .2px solid #FFF;
   -webkit-transition: .3s;
   transition: .3s;
+  /* @media screen and (max-width: 1377px){
+            font-size: .9rem;
+        } */
 }
 
 main .document:hover {
@@ -689,7 +688,7 @@ main .document:hover i {
 main .document i {
   display: block;
   font-size: 4rem;
-  margin-right: .7em;
+  margin-right: .5em;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -759,7 +758,7 @@ main .links {
 }
 
 main .links__link {
-  width: 19%;
+  width: 15%;
 }
 
 @media (max-width: 933px) {
@@ -795,9 +794,6 @@ main .products {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   gap: 1.5em;
-  /* @include mobile{
-            flex-direction: column;
-        } */
 }
 
 main .product {
@@ -839,6 +835,13 @@ main .testimonials_section {
   border-right: none;
   border-left: none;
   overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 675px) {
+  main .testimonials_section h2 {
+    text-align: left;
+  }
 }
 
 main .testimonials_wrapper {
@@ -847,7 +850,6 @@ main .testimonials_wrapper {
 
 main .testimonials {
   overflow: hidden;
-  position: relative;
   -webkit-transition: 1s;
   transition: 1s;
   display: -webkit-box;
@@ -856,15 +858,22 @@ main .testimonials {
 }
 
 main .testimonials_controllers {
-  position: relative;
-  right: -80%;
-  top: -5.7em;
+  position: absolute;
+  right: 10%;
+  top: 3.5em;
   width: 100px;
+}
+
+@media (max-width: 933px) {
+  main .testimonials_controllers {
+    top: 2.75em;
+  }
 }
 
 @media (max-width: 675px) {
   main .testimonials_controllers {
-    top: -3.8em;
+    top: 1.25em;
+    right: .9em;
   }
 }
 
@@ -886,7 +895,6 @@ main .testimonials_controller {
 
 main .testimonials_controller:hover, main .testimonials_controller:active {
   background: #285299;
-  opacity: 1;
 }
 
 main .testimonials_controller:hover i, main .testimonials_controller:active i {
@@ -898,21 +906,27 @@ main .testimonials_controller i {
   transition: .3s;
 }
 
+@media (max-width: 675px) {
+  main .testimonials_controller {
+    width: 35px;
+    height: 35px;
+    padding: 0.33em;
+  }
+}
+
 main .testimonial {
   position: relative;
   top: 0;
   right: 0;
-  width: calc(11% - 4em);
   margin: 0 2em;
   -webkit-transition: .4s;
   transition: .4s;
-  /*  @include md{
-            width: calc(300%/2 - 4em);
-        }
+}
 
-        @include mobile{ 
-            width: calc(100%/3 - 4em) !important;
-        } */
+@media (max-width: 933px) {
+  main .testimonial {
+    margin: 0 1em;
+  }
 }
 
 main .testimonial__name {
@@ -947,7 +961,6 @@ main .partner {
   display: block;
   width: 20%;
   height: auto;
-  /* padding: 0 2em; */
   text-align: center;
   margin-bottom: 1em;
 }

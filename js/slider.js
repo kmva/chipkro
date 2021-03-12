@@ -1,20 +1,42 @@
 function createSlider (options) {
     let slider = options.slider;
     let slides = options.slides;
+    let margin = options.margin;
 
     let prevButton = options.prevButton;
     let nextButton = options.nextButton;
 
-    let sCountFPP = options.count;
+    let slidesNumberPerPage = options.slidesNumberPerPage;
 
     let position = 1;
     let direction;
 
-    let sliderSize = Math.ceil(slides.length / sCountFPP);
+    let sliderSize = Math.ceil(slides.length / slidesNumberPerPage);
     let sliderWidth = sliderSize * 100;
     slider.style.width = sliderWidth + '%';
+    slides.forEach(slide => {slide.style.width = sliderWidth});
 
-/*     slides.forEach(slide => {slide.style.width = `calc(${sliderWidth/sCountFPP/2} - 4em)`}); */
+        
+    let mediaQueryMD = window.matchMedia('(max-width: 933px)');
+    function handleTabletChange(event) {
+        if (event.matches) {
+            sliderSize = slides.length;
+            slider.style.width = slides.length + '00%';
+    
+            slides.forEach(slide => {
+                slide.style.width = '100%';
+            });
+        } else {
+            sliderSize = Math.ceil(slides.length / slidesNumberPerPage);
+            slider.style.width = sliderWidth + '%';
+            slides.forEach(slide => {
+                slide.style.width = `calc(${100/slidesNumberPerPage/sliderSize}% - ${margin})`;
+            }); 
+        }
+    }
+    mediaQueryMD.addListener(handleTabletChange);
+    handleTabletChange(mediaQueryMD);
+
 
 
     function toRight() {
