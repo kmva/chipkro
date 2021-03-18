@@ -488,7 +488,7 @@ main .post__text {
   }
 }
 
-main .post__image {
+main .post img {
   display: block;
   width: 100%;
   height: auto;
