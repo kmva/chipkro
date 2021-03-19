@@ -63,8 +63,8 @@ main h2 {
 }
 
 main .news {
-  width: 85%;
-  max-width: 835px;
+  width: 90%;
+  /* max-width: 835px; */
   margin-right: 6em;
   font-size: 1.2rem;
 }
@@ -89,11 +89,11 @@ main .news__block {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-family: 'Open Sans', sans-serif;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
   -webkit-transition: .3s;
   transition: .3s;
   /* line-height: 131%; */
@@ -109,12 +109,13 @@ main .news__block {
 
 @media (max-width: 933px) {
   main .news__block:last-child {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
   }
 }
 
 @media (max-width: 675px) {
   main .news__block {
+    margin-bottom: 1.5em;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -123,27 +124,27 @@ main .news__block {
   }
 }
 
-main .news__image {
+main .news img {
   display: block;
-  width: 40%;
+  min-width: 40%;
   height: 250px;
-  -webkit-box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.4);
-          box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.4);
   margin-right: 2em;
   border-radius: 4px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top center;
+     object-position: top center;
 }
 
 @media (max-width: 1270px) {
-  main .news__image {
+  main .news img {
     width: 250px;
     /*  margin-bottom: 2.5em; */
   }
 }
 
 @media (max-width: 675px) {
-  main .news__image {
+  main .news img {
     width: 100%;
     height: 300px;
     margin: 0 auto 1.5em;
@@ -164,7 +165,7 @@ main .news__heading {
 @media (max-width: 1355px) {
   main .news__heading {
     font-size: 1.2rem;
-    line-height: 110%;
+    /* line-height: 110%; */
   }
 }
 
@@ -189,6 +190,12 @@ main .news__details {
 
 main .news__details:hover, main .news__details:active {
   color: #D38907;
+}
+
+@media (max-width: 675px) {
+  main .news__details {
+    margin: .5em 0;
+  }
 }
 
 main .news__date {
@@ -1120,7 +1127,8 @@ table td, table th {
 
 .more_news_button {
   width: 260px;
-  margin-top: 6em;
+  margin-top: 3em;
+  margin-bottom: 1em;
   background: none;
   border: none;
   cursor: pointer;

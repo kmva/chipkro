@@ -185,7 +185,7 @@ main{
 
     h2{
         margin-bottom: 1.6em;
-        font-size: 2rem;
+        font-size: 2.2rem;
         text-align: center;
         color: $blue-m;
 
@@ -394,6 +394,19 @@ main{
         margin-bottom: 2em;
     }
 
+    .csh{
+        color: inherit;
+        transition: .1s;
+
+        &--disable{
+            color: rgba($color: $blue-m, $alpha: .5);
+
+            &:hover, &:active {
+                color: inherit;
+            }
+        }
+    }
+
     .cards{
         @include flex(space-between, flex-start);
         max-width: 1640px;
@@ -408,9 +421,22 @@ main{
             width: 98%;
         }
 
+        &--disable{
+            display: none;
+        }
+        
+        &[data-name='announcements']{
+            .card{
+                min-height: 610px; 
+            }
+
+            
+        }
+
         .card{
             width: 30%;
-            min-height: 580px;
+            min-height: 655px;
+            /* height: 655px; */
             border: 2px solid $gold;   
             text-align: center; 
             margin: auto;
@@ -419,13 +445,13 @@ main{
             font-family: 'Open Sans', sans-serif;
 
             @include md{
-                min-height: 438px;
+                min-height: 590px;
             }
 
             @include mobile{
                 width: 100%;
                 margin: 0 auto 2em;
-               /*  min-height: 526px; */
+                min-height: 526px;
 
                 &:last-child{
                     margin-bottom: .5em;
@@ -434,16 +460,22 @@ main{
 
             &__image_block{
                 width: 100%;
+                /* min-height: 335px; */
+                max-height: 335px;
                 overflow: hidden;
 
                 img{
                     width: 100%; 
-                    object-fit: cover;
+                    height: 100%;
+                    max-height: 335px;
+                    object-fit: contain;
+                    object-position: top center;
                 }   
             }
 
             &__info{
-                padding: 2em;
+                padding: 1.5em;
+                text-align: center;
 
                 @include md{
                     padding: 1em;
@@ -451,7 +483,7 @@ main{
             }
 
             &__heading{
-                font-size: 1.3em;
+                font-size: 1.2em;
                 margin-bottom: .8em;
                 font-weight: normal;
                 font-family: 'Open Sans', sans-serif;
@@ -464,6 +496,7 @@ main{
             &__date{
                 margin-bottom: 1.4em;
                 color: #C5C5C5;
+                text-align: center;
 
                 @include md{
                     font-size: .8rem;
@@ -833,6 +866,10 @@ main{
         &:after{
             width: 110px;
         }
+    }
+
+    &--disable{
+        display: none;
     }
 
     /* @include md{

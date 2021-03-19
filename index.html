@@ -105,42 +105,77 @@
 
         <section class="cards_section">
 
-        <h2>Новости</h2>
-            <div class="cards">
-            <div class="card">
-                <div class="card__image_block">
-                    <img src="img/4.png" alt="" class="card__image">
+        <h2><button class="csh">Новости</button> | <button class="csh csh--disable">Анонсы</button></h2>
+            <div class="cards" data-name="news">
+                <div class="card">
+                    <div class="card__image_block">
+                        <img src="img/3.png" alt="" class="card__image">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__heading"><a href="#">Старший преподаватель Центра сопровождения ГИА Г.В Успаева приняла участие в Международном педагогическом форуме "EdEXPO 2021: Образование с позиции будущего"</a></h3>
+                        <p class="card__date">11.01.2019</p>
+                        <a href="templates/post.html" class="card__details">Читать</a>
+                    </div>
                 </div>
-                <div class="card__info">
-                    <h3 class="card__heading"><a href="#">Межрегиональный брейн-ринг по естественнонаучным предметам</a></h3>
-                    <p class="card__date">11.01.2019</p>
-                    <a href="templates/post.html" class="card__details">Читать</a>
-                </div>
-            </div>
 
-            <div class="card">
-                <div class="card__image_block">
-                    <img src="img/3.png" alt="" class="card__image">
+                <div class="card">
+                    <div class="card__image_block">
+                        <img src="img/4.png" alt="" class="card__image">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__heading"><a href="#">Республиканский круглый стол “Объединимся в&nbsp;борьбе против коррупции в&nbsp;интересах мира, развития и безопасности” Республиканский круглый стол “Объединимся в&nbsp;борьбе против коррупции в&nbsp;интересах мира, развития и безопасности”</a></h3>
+                        <p class="card__date">11.01.2019</p>
+                        <a href="templates/post.html" class="card__details">Читать</a>
+                    </div>
                 </div>
-                <div class="card__info">
-                    <h3 class="card__heading"><a href="#">Республиканский круглый стол “Объединимся в&nbsp;борьбе против коррупции в&nbsp;интересах мира, развития и безопасности”</a></h3>
-                    <p class="card__date">11.01.2019</p>
-                    <a href="templates/post.html" class="card__details">Читать</a>
-                </div>
-            </div>
 
-            <div class="card">
-                <div class="card__image_block">
-                    <img src="img/5.png" alt="" class="card__image">
-                </div>
-                <div class="card__info">
-                    <h3 class="card__heading"><a href="#">Специалисты ЧИПКРО приняли участие в&nbsp;презентации сборника "Литературно-географический атлас Чеченской Республики"</a></h3>
-                    <p class="card__date">11.01.2019</p>
-                    <a href="templates/post.html" class="card__details">Читать</a>
+                <div class="card">
+                    <div class="card__image_block">
+                        <img src="img/5.png" alt="" class="card__image">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__heading"><a href="#">Вниманию учителей и методистов по начальному уровню образования! Издательство "Русское слово" предлагает вебинар «Начальная школа: новинки Федерального перечня учебников на 2021 год»</a></h3>
+                        <p class="card__date">11.01.2019</p>
+                        <a href="templates/post.html" class="card__details">Читать</a>
+                    </div>
                 </div>
             </div>
+            <div class="cards cards--disable" data-name="announcements">
+                <div class="card">
+                    <div class="card__image_block">
+                        <img src="img/1234.png" alt="" class="card__image">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__heading"><a href="#">Вниманию учителей и методистов по начальному уровню образования! Издательство "Русское слово" предлагает вебинар «Начальная школа: новинки Федерального перечня учебников на 2021 год»</a></h3>
+                        <p class="card__date">11.01.2019</p>
+                        <a href="templates/post.html" class="card__details">Читать</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image_block">
+                        <img src="img/еапу.png" alt="" class="card__image">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__heading"><a href="#">Внимание! Всероссийская научно-практическая конференция по теме «Лучшие практики внедрения ФГОС среднего общего образования».</a></h3>
+                        <p class="card__date">11.01.2019</p>
+                        <a href="templates/post.html" class="card__details">Читать</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image_block">
+                        <img src="img/аппо.png" alt="" class="card__image">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__heading"><a href="#">ВНИМАНИЕ! Предлагаем принять участие во II Международном конкурсе молодых преподавателей!</a></h3>
+                        <p class="card__date">11.01.2019</p>
+                        <a href="templates/post.html" class="card__details">Читать</a>
+                    </div>
+                </div>
             </div>
             <a href="templates/news.html" class="to_all_link">Все новости</a>
+            <a href="templates/announcements.html" class="to_all_link to_all_link--disable">Все анонсы</a>
         </section>
 
         <div class="container documents_section">
@@ -339,7 +374,6 @@
             </div>
         </div>
            
-        
         <div class="container links_section">
             <h2>Полезные ссылки</h2>
             <div class="row links">
@@ -422,37 +456,52 @@
     <script type="text/javascript" src="js/slider.js"></script>
     <script>
 
-    {
-        let slider = document.querySelector('.slider_section__items');
-        let slides = document.querySelectorAll('.slider_section__item');
-        let prevButton = document.querySelector('.slider_section__controller--left');
-        let nextButton = document.querySelector('.slider_section__controller--right');
+        {
+            let slider = document.querySelector('.slider_section__items');
+            let slides = document.querySelectorAll('.slider_section__item');
+            let prevButton = document.querySelector('.slider_section__controller--left');
+            let nextButton = document.querySelector('.slider_section__controller--right');
 
-        createSlider({
-            slider: slider,
-            slides: slides,
-            prevButton: prevButton,
-            nextButton: nextButton,
-            slidesNumberPerPage: 1
+            createSlider({
+                slider: slider,
+                slides: slides,
+                prevButton: prevButton,
+                nextButton: nextButton,
+                slidesNumberPerPage: 1
+            });
+        }
+            
+
+        {
+            let slider = document.querySelector('.testimonials');
+            let testimonials = document.querySelectorAll('.testimonial');
+            let prevButton = document.querySelector('.testimonials_controller--left');
+            let nextButton = document.querySelector('.testimonials_controller--right');
+
+            createSlider({
+                slider: slider,
+                slides: testimonials,
+                prevButton: prevButton,
+                nextButton: nextButton,
+                slidesNumberPerPage: 3,
+                margin: '4em'
+            });
+        }
+
+
+        let cshButtons = document.querySelectorAll('button.csh');
+        let cards = document.querySelectorAll('.cards');
+        let toAllLinks = document.querySelectorAll('.cards_section .to_all_link');
+
+        cshButtons.forEach(item => {
+            item.addEventListener('click', event => {
+                if(event.target.classList.contains('csh--disable')){
+                    cshButtons.forEach(item => item.classList.toggle('csh--disable'));
+                    cards.forEach(item => {item.classList.toggle('cards--disable')})
+                    toAllLinks.forEach(item => item.classList.toggle('to_all_link--disable'));
+                }
+            });
         });
-    }
-        
-
-    {
-        let slider = document.querySelector('.testimonials');
-        let testimonials = document.querySelectorAll('.testimonial');
-        let prevButton = document.querySelector('.testimonials_controller--left');
-        let nextButton = document.querySelector('.testimonials_controller--right');
-
-        createSlider({
-            slider: slider,
-            slides: testimonials,
-            prevButton: prevButton,
-            nextButton: nextButton,
-            slidesNumberPerPage: 3,
-            margin: '4em'
-        });
-    }
        
    </script>
 

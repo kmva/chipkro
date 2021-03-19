@@ -474,7 +474,7 @@ a:hover, a:active {
 }
 
 aside {
-  padding: 8em 2em 4em 0;
+  padding: 8em 0 4em;
   margin-bottom: 3em;
   width: 22%;
   min-width: 280px;
