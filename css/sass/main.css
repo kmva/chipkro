@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* font-family: 'Alegreya', serif;
 font-family: 'Istok Web', sans-serif;
 font-family: 'Open Sans', sans-serif; */
@@ -364,107 +363,84 @@ main .news__date {
   font-size: 1rem;
 }
 
-@media (max-width: 1270px) {
-  main .event {
-    width: 37%;
-  }
+main .actual_video {
+  /* @include large{ */
+  width: 30%;
+  /* } */
 }
 
 @media (max-width: 933px) {
-  main .event {
+  main .actual_video {
     width: 100%;
   }
 }
 
-main .event__block {
+main .actual_video__block {
   text-align: right;
   font-family: 'Open Sans', sans-serif;
   position: relative;
 }
 
 @media (max-width: 933px) {
-  main .event__block {
+  main .actual_video__block {
     width: 100%;
     margin: auto;
     margin-bottom: 4em;
   }
 }
 
-main .event__image {
+main .actual_video__recording {
   width: 100%;
+  height: 235px;
   margin-bottom: 1.5em;
-  position: relative;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  /* border-radius: 3px; */
-}
-
-main .event__image_block {
-  width: 100%;
-}
-
-main .event__image_block::after {
-  content: '21 Апреля 10:00';
-  position: absolute;
-  display: block;
-  width: 100px;
-  right: -10px;
-  top: 16px;
-  background: #285299;
-  padding: .6em;
-  color: #FFF;
-  font-weight: bold;
-  font-size: 1.1rem;
-  -webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.5);
-  line-height: 130%;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 @media (max-width: 933px) {
-  main .event__image {
+  main .actual_video__recording {
     max-height: 300px;
   }
 }
 
-main .event__heading {
+main .actual_video__heading {
   margin: 0 0 2em auto;
-  max-width: 300px;
+  max-width: 330px;
 }
 
-main .event__heading a {
+main .actual_video__heading a {
   -webkit-transition: .2s;
   transition: .2s;
   cursor: pointer;
 }
 
 @media (max-width: 933px) {
-  main .event__heading {
+  main .actual_video__heading {
     width: 100%;
   }
 }
 
-main .event__all {
+main .actual_video__all {
   color: #285299;
   font-weight: bold;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-main .event__all:hover, main .event__all:active {
+main .actual_video__all:hover, main .actual_video__all:active {
   color: #D38907;
 }
 
 @media (max-width: 1270px) {
-  main .event__all {
+  main .actual_video__all {
     position: absolute;
-    bottom: -15px;
+    bottom: -35px;
     right: 0;
   }
 }
 
 @media (max-width: 933px) {
-  main .event__all {
+  main .actual_video__all {
     bottom: -35px;
   }
 }

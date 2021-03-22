@@ -299,11 +299,11 @@ main{
         }
     }
 
-    .event{
+    .actual_video{
         
-        @include large{
-            width: 37%;
-        }
+        /* @include large{ */
+            width: 30%;
+        /* } */
 
         @include md{
            width: 100%;
@@ -321,33 +321,12 @@ main{
             }
         }
 
-        &__image{
+        &__recording{
             width: 100%;
+            height: 235px;
             margin-bottom: 1.5em;
-            position: relative;
-            display: block;
-            object-fit: cover;
-            /* border-radius: 3px; */
-
-            &_block{
-                width: 100%;
-
-                &::after{
-                    content: '21 Апреля 10:00';
-                    position: absolute;
-                    display: block;
-                    width: 100px;
-                    right: -10px;
-                    top: 16px;
-                    background: #285299;
-                    padding: .6em;
-                    color: #FFF;
-                    font-weight: bold;
-                    font-size: 1.1rem;
-                    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, .5);
-                    line-height: 130%;
-                }
-            }
+            border-radius: 4px;
+            overflow: hidden;
 
             @include md{
                 max-height: 300px;
@@ -357,7 +336,7 @@ main{
 
         &__heading{
             margin: 0 0 2em auto;
-            max-width: 300px;
+            max-width: 330px;
 
             a{
                 transition: .2s;
@@ -380,7 +359,7 @@ main{
 
             @include large{
                 position: absolute;
-                bottom: -15px;
+                bottom: -35px;
                 right: 0;
             }
 
