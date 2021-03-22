@@ -578,7 +578,7 @@ main .cards .card__info {
 
 @media (max-width: 933px) {
   main .cards .card__info {
-    padding: 1em;
+    padding: .6em;
   }
 }
 

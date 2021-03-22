@@ -866,12 +866,6 @@ main .center_block__text--gold {
   color: #D38907;
 }
 
-main .center_block .covers {
-  /* .row{
-                    flex-wrap: wrap;
-                } */
-}
-
 main .center_block .covers__link {
   width: 32%;
 }
