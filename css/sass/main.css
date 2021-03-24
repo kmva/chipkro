@@ -633,6 +633,7 @@ main .documents_section .row {
 
 main .documents {
   width: 100%;
+  background: #717171;
 }
 
 main .document {
@@ -661,6 +662,8 @@ main .document {
 main .document:hover {
   border: 0.2px solid #717171;
   border-bottom-width: 7px;
+  -webkit-transition: border .2s;
+  transition: border .2s;
   -webkit-transform: translateY(-0.4em);
           transform: translateY(-0.4em);
 }

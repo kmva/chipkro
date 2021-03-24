@@ -527,6 +527,7 @@ main{
 
     .documents{
         width: 100%;
+        background: $lightgrey;
     }
 
     .document{
@@ -544,6 +545,7 @@ main{
         &:hover{
             border: .2px solid $lightgrey;
             border-bottom-width: 7px;
+            transition: border .2s;
             transform: translateY(-.4em);
 
             i{

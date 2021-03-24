@@ -262,12 +262,12 @@ main .events .event__block {
             flex-direction: column;
     text-align: center;
     /* &>* {
-                    width: 100%;
-                } */
+                        width: 100%;
+                    } */
   }
 }
 
-main .events .event__image {
+main .events .event img {
   display: block;
   width: 40%;
   height: 250px;
@@ -280,14 +280,14 @@ main .events .event__image {
 }
 
 @media (max-width: 1270px) {
-  main .events .event__image {
+  main .events .event img {
     width: 250px;
     /*  margin-bottom: 2.5em; */
   }
 }
 
 @media (max-width: 675px) {
-  main .events .event__image {
+  main .events .event img {
     width: 100%;
     height: 300px;
     margin: 0 auto 1.5em;
