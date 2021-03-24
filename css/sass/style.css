@@ -973,7 +973,7 @@ main .center__list--not_active {
   margin-bottom: .5em;
 }
 
-.info li::before {
+.info li:not(.document)::before {
   content: '';
   display: block;
   width: 35px;
@@ -992,8 +992,35 @@ main .center__list--not_active {
   margin-bottom: 1em;
 }
 
-.info a:hover, .info a:active {
+.info .documents h2 {
+  color: #285299;
+}
+
+.info .documents__list .document {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info .documents__list .document a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 1em;
+}
+
+.info .documents__list .document a:hover p, .info .documents__list .document a:active p {
   color: #D38907;
+}
+
+.info .documents__list .document i {
+  font-size: 3rem;
 }
 
 .structure img {

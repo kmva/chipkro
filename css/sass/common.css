@@ -474,7 +474,7 @@ a:hover, a:active {
 }
 
 aside {
-  padding: 8em 0 4em;
+  padding: 8em 2em 4em 0;
   margin-bottom: 3em;
   width: 22%;
   min-width: 280px;
@@ -652,12 +652,10 @@ aside .sidebar_submenu__item {
 }
 
 .footer__block--links a {
-  color: #FFF;
   display: block;
   margin-bottom: 1em;
   -webkit-transition: .4s;
   transition: .4s;
-  /* text-decoration: underline; */
 }
 
 .footer__block--links a:first-of-type {
@@ -667,6 +665,10 @@ aside .sidebar_submenu__item {
 
 .footer__block--links a:hover, .footer__block--links a:active {
   text-decoration: underline;
+}
+
+.footer__block a, .footer__block a:hover, .footer__block a:active {
+  color: #FFF;
 }
 
 .footer__heading {

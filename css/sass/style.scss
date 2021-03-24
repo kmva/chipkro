@@ -799,7 +799,7 @@ main{
         margin-bottom: .5em;
 
         
-        &::before{
+        &:not(.document)::before{
             content: '';
             display: block;
             width: 35px;
@@ -815,9 +815,34 @@ main{
         transition: .2s;
         display: block;
         margin-bottom: 1em;
+    }
 
-        &:hover, &:active{
-            color: $gold;
+    .documents{
+
+        h2{
+            color: $blue-m;
+        }
+
+        &__list{
+
+            .document{
+                display: flex;
+
+                a{
+                    @include flex(space-between, baseline);
+                    gap: 1em;
+
+                    &:hover, &:active{
+                        p{
+                            color: $gold;
+                        }
+                    }
+                }
+
+                i{
+                    font-size: 3rem;
+                }
+            }
         }
     }
 }

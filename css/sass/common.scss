@@ -575,11 +575,9 @@ aside{
 
         &--links{
             a {
-                color: #FFF;
                 display: block;
                 margin-bottom: 1em;
                 transition: .4s;
-                /* text-decoration: underline; */
 
                 &:first-of-type{
                     text-transform: uppercase;
@@ -590,6 +588,10 @@ aside{
                     text-decoration: underline;
                 }
             }
+        }
+
+        a, a:hover, a:active {
+            color: #FFF;
         }
     }
 
