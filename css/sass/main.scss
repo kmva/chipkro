@@ -527,7 +527,6 @@ main{
 
     .documents{
         width: 100%;
-        background: $lightgrey;
     }
 
     .document{
@@ -604,6 +603,13 @@ main{
 
         @include mobile{
             width: 100%;
+        }
+
+        img{
+            object-fit: cover;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
         }
     }
 

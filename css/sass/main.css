@@ -633,7 +633,6 @@ main .documents_section .row {
 
 main .documents {
   width: 100%;
-  background: #717171;
 }
 
 main .document {
@@ -742,6 +741,14 @@ main .video {
   main .video {
     width: 100%;
   }
+}
+
+main .video img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
 }
 
 main .links {
