@@ -189,8 +189,13 @@ main{
         text-align: center;
         color: $blue-m;
 
+        @include md{
+            font-size: 1.9rem;
+        }
+
         @include mobile{
             margin-bottom: .7em;
+            font-size: 1.5rem;
         }
     }
 
@@ -823,6 +828,52 @@ main{
                 opacity: 1;
             }
 
+        }
+    }
+
+    .resources{
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .resource {
+
+        display: block;
+        width: 23%;
+        height: auto;
+        text-align: center;
+        transition: .2s;
+
+        @include md{
+            width: 49%;
+            margin-bottom: 1.6em;
+        }
+
+        img{
+            width: 100%;
+            max-width: 290px;
+            transition: .1s;
+            margin-bottom: .7em;
+        }
+
+        p{
+            width: 90%;
+            margin: auto;
+            color: $grey;
+            font-size: 1.1rem;
+
+            @include mobile{
+                font-size: .9rem;
+            }
+        }
+
+
+        &:hover, &:active{
+
+            img{
+                transform: scale(1.05);
+            }
         }
     }
 

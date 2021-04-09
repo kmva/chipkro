@@ -221,9 +221,16 @@ main h2 {
   color: #285299;
 }
 
+@media (max-width: 933px) {
+  main h2 {
+    font-size: 1.9rem;
+  }
+}
+
 @media (max-width: 675px) {
   main h2 {
     margin-bottom: .7em;
+    font-size: 1.5rem;
   }
 }
 
@@ -1007,6 +1014,59 @@ main .partner img {
 
 main .partner img:hover {
   opacity: 1;
+}
+
+main .resources {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .resource {
+  display: block;
+  width: 23%;
+  height: auto;
+  text-align: center;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+@media (max-width: 933px) {
+  main .resource {
+    width: 49%;
+    margin-bottom: 1.6em;
+  }
+}
+
+main .resource img {
+  width: 100%;
+  max-width: 290px;
+  -webkit-transition: .1s;
+  transition: .1s;
+  margin-bottom: .7em;
+}
+
+main .resource p {
+  width: 90%;
+  margin: auto;
+  color: #2C2B2B;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 675px) {
+  main .resource p {
+    font-size: .9rem;
+  }
+}
+
+main .resource:hover img, main .resource:active img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .to_all_link {
