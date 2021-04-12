@@ -489,6 +489,7 @@ aside {
 
 aside .popular_news {
   font-family: 'Open Sans', sans-serif;
+  position: relative;
 }
 
 aside .popular_news h2 {
@@ -499,14 +500,13 @@ aside .popular_news h2 {
 aside .popular_news__block {
   width: 100%;
   height: 300px;
-  background: url("../../img/3.png") no-repeat center/cover;
   position: relative;
   margin-bottom: 2.5em;
   cursor: pointer;
 }
 
 aside .popular_news__block:nth-of-type(odd) .popular_news__heading {
-  margin-left: auto;
+  right: 0;
 }
 
 aside .popular_news__block:hover .popular_news__heading, aside .popular_news__block:active .popular_news__heading {
@@ -519,8 +519,19 @@ aside .popular_news__block:hover .popular_news__heading, aside .popular_news__bl
   }
 }
 
+aside .popular_news__block img {
+  position: absolute;
+  z-index: 99;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 aside .popular_news__heading {
-  position: relative;
+  position: absolute;
+  z-index: 100;
   width: 65%;
   height: 100%;
   background: rgba(40, 82, 153, 0.8);
