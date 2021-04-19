@@ -14,13 +14,6 @@ body {
   /* font-size: 1.1rem; */
 }
 
-.red_message {
-  padding: .3em;
-  background: darkred;
-  color: #FFF;
-  text-align: center;
-}
-
 .main_nav {
   border: none !important;
 }
