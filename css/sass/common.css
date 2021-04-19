@@ -484,6 +484,14 @@ aside {
   aside {
     padding: 2em 0;
     width: 100%;
+    margin-bottom: 1.5em;
+  }
+}
+
+@media (max-width: 675px) {
+  aside {
+    padding: 1em 0;
+    margin-bottom: .5em;
   }
 }
 

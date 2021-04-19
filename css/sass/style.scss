@@ -35,6 +35,10 @@ main{
             font-size: 1.5rem;
         }
 
+        @include mobile{
+            margin-bottom: .5em;
+        }
+
         &.post_page_header{
             margin-bottom: 1em;
         }
@@ -46,6 +50,10 @@ main{
 
         @include md{
             font-size: 1.3rem;
+        }
+
+        @include mobile{
+            margin-bottom: .5em;
         }
     }
 
@@ -771,6 +779,10 @@ main{
         width: 100%;
         padding: 2em 0;
         border-bottom: 3px solid $blue-m;
+
+        @include mobile{
+            padding: .8em 0;
+        }
     }
 
     &__heading{
@@ -797,11 +809,10 @@ main{
     li{
         @include flex(flex-start, baseline);
         margin-bottom: .5em;
-
         
         &:not(.document)::before{
             content: '';
-            display: block;
+            display: inline-block;
             width: 35px;
             height: 4px;
             background: $gold;
@@ -810,11 +821,21 @@ main{
         }
     }
 
+    &__contacts_list{
+        li{
+            display: block;
+        }
+    }
+
     a{
         color: $blue-m;
         transition: .2s;
         display: block;
         margin-bottom: 1em;
+
+        @include mobile{
+            margin-bottom: .2em;
+        }
     }
 
     .documents{
