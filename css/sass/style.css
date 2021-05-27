@@ -58,7 +58,7 @@ main h1.post_page_header {
 }
 
 main h2 {
-  margin-bottom: 1.8em;
+  margin-bottom: 1.5em;
   font-size: 1.6rem;
 }
 
@@ -70,7 +70,7 @@ main h2 {
 
 @media (max-width: 675px) {
   main h2 {
-    margin-bottom: .5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -935,10 +935,6 @@ main .center__list--not_active {
   font-weight: bold;
 }
 
-.info .bold {
-  font-weight: bold;
-}
-
 .info__about {
   color: #285299;
   font-size: 1.4rem;
@@ -1020,35 +1016,61 @@ main .center__list--not_active {
   }
 }
 
-.info .documents h2 {
-  color: #285299;
+.with_icon_list {
+  margin: 1em;
+  margin-bottom: 2em;
+  font-size: 1.1rem;
 }
 
-.info .documents__list .document {
+.with_icon_list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 1.5em;
 }
 
-.info .documents__list .document a {
+.with_icon_list li a {
+  color: #285299;
+  margin-bottom: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1em;
 }
 
-.info .documents__list .document a:hover p, .info .documents__list .document a:active p {
+.with_icon_list li a:hover p, .with_icon_list li a:active p {
   color: #D38907;
 }
 
-.info .documents__list .document i {
+.with_icon_list li p {
+  margin-bottom: 0;
+}
+
+.with_icon_list li i {
   font-size: 3rem;
+}
+
+@media (max-width: 675px) {
+  .with_icon_list {
+    font-size: .9rem;
+  }
+  .with_icon_list li {
+    margin-bottom: .5em;
+  }
+  .with_icon_list li a {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .with_icon_list li i {
+    font-size: 1.8rem;
+  }
 }
 
 .structure img {

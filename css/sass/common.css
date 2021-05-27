@@ -435,6 +435,9 @@ header .menu_btn--active span:after {
   .row--webinars aside, .row--webinars main.with_aside {
     width: 100%;
   }
+  .row--webinars aside {
+    margin-bottom: 1.5em;
+  }
 }
 
 @media (max-width: 933px) {
@@ -465,6 +468,10 @@ header .menu_btn--active span:after {
   text-transform: uppercase;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 a {
   color: #2C2B2B;
 }
@@ -482,9 +489,7 @@ aside {
 
 @media (max-width: 933px) {
   aside {
-    padding: 2em 0;
     width: 100%;
-    margin-bottom: 1.5em;
   }
 }
 
@@ -569,14 +574,16 @@ aside .sidebar {
   overflow: hidden;
 }
 
-aside .sidebar_menu {
-  /* padding: 1em .5em; */
-}
-
 aside .sidebar_menu__item {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: .8em;
+}
+
+@media (max-width: 675px) {
+  aside .sidebar_menu__item {
+    font-size: 1rem;
+  }
 }
 
 aside .sidebar_menu::after {

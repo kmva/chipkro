@@ -365,6 +365,10 @@ header{
             flex-direction: column;
 
             aside, main.with_aside{width: 100%;}
+
+            aside{
+                margin-bottom: 1.5em;
+            }
         }
     }
 
@@ -396,6 +400,10 @@ header{
     text-transform: uppercase;
 }
 
+.bold{
+    font-weight: bold;
+}
+
 a{
     color: $grey;
 
@@ -411,9 +419,7 @@ aside{
     min-width: 280px;
 
     @include md{
-        padding: 2em 0;
         width: 100%;
-        margin-bottom: 1.5em;
     }
 
     @include mobile{
@@ -491,12 +497,15 @@ aside{
         overflow: hidden;
 
         &_menu{
-            /* padding: 1em .5em; */
     
             &__item{
                 font-size: 1.2rem;
                 font-weight: 700;
                 margin-bottom: .8em;
+
+                @include mobile{
+                    font-size: 1rem;
+                }
             }
     
             &::after{
